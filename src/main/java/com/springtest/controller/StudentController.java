@@ -19,7 +19,7 @@ public class StudentController
     @Autowired
     StudentDAO dao;
 
-    @RequestMapping("/studentform")
+    @RequestMapping("/studentform") // GET method
     public String showform(Model m){
         m.addAttribute("command", new Student());
         return "studentform";
@@ -29,11 +29,11 @@ public class StudentController
     public String save(@ModelAttribute("student") Student student)
     {
         System.out.println("at save method");
-        dao.save(student);
+        dao.saveRecord(student);
         return "redirect:/viewstudents";
     }
 
-    @RequestMapping("/viewstudents")
+    @RequestMapping("/viewstudents") // GET method
     public String viewStudents(Model m){
         List<Student> list=dao.getStudents();
         System.out.println("list size: "+list.size());

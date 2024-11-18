@@ -18,7 +18,7 @@
          </tr> 
          <tr>  
           <td> </td>  
-          <td><input type="submit" value="Save" /></td>  
+          <td><input type="submit" value="Create New" /></td>
          </tr>  
         </table>  
        </form:form>  
